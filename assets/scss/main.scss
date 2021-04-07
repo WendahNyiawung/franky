@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Inter:wght@200&display=swap');
+//mixins
+@mixin slideProperties {
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    margin-top: 3rem;
+}
+@mixin slideContent{
+    padding-top: 12rem;
+    margin-left: 6rem;
+    @include phoneMobile{
+        //margin-top: 10rem;
+        margin-left: 1rem;
+    }
+  
+}
+
+/* |||||| Custom breakpoints*/
+//mobile
+@mixin phoneMobile {
+    @media only screen and (max-width:576px){
+        @content;
+    }
+}
+@mixin mediumMobile {
+    @media only screen and (min-width:768px){
+        @content;
+    }
+}
+
+.slider{
+  //height: 100vh;
+  margin-top: -0rem;
+  &__slide-1{
+    background-image: linear-gradient(5deg, rgba(20, 21, 22, 0.404) 26%, rgba(19, 127, 190, 0.432) 100%),url('../img/bg-1.jpg');
+    @include slideProperties();
+    &__content{
+        @include slideContent();
+        h1{
+            font-family: 'Acme', sans-serif;
+        }
+        p{
+            font-family: 'Inter', sans-serif;
+            font-weight: 200;
+            font-size: 1rem;
+            font-kerning: auto;
+        }
+
+    }
+  }  
+  &__slide-2{
+    background-image: linear-gradient(5deg, rgba(20, 21, 22, 0.404) 26%, rgba(19, 127, 190, 0.432) 100%),url('../img/bg-2.jpg');
+    @include slideProperties();
+    &__content{
+        @include slideContent();
+        h1{
+            font-family: 'Acme', sans-serif;
+        }
+        p{
+            font-family: 'Inter', sans-serif;
+            font-weight: 200;
+            font-size: 1rem;
+            font-kerning: auto;
+        }
+
+    }
+  }  
+  &__slide-3{
+    background-image: linear-gradient(5deg, rgba(20, 21, 22, 0.404) 26%, rgba(19, 127, 190, 0.432) 100%),url('../img/bg-3.jpg');
+    @include slideProperties();
+    &__content{
+        @include slideContent();
+        h1{
+            font-family: 'Acme', sans-serif;
+        }
+        p{
+            font-family: 'Inter', sans-serif;
+            font-weight: 200;
+            font-size: 1rem;
+            font-kerning: auto;
+        }
+
+    }
+  }  
+}
+.section-a{
+    padding: 5rem 8rem;
+    background-color: #f1efef;
+    color: #fff;
+    @include phoneMobile{
+        padding: 2rem 1rem;
+    }
+}
+.admin{
+    padding: 5rem 8rem;
+    background-color: #EAEAEA;
+    @include phoneMobile{
+        padding: 5rem .8rem 
+    }
+}
+
+
+
+@import'../boostrap/scss/bootstrap.scss';

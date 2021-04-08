@@ -99,7 +99,48 @@
         padding: 5rem .8rem 
     }
 }
-
+.our-mission{
+    padding: 3rem 8rem;
+    margin-top: 3rem;
+    background-color: #EAEAEA;
+    @include phoneMobile{
+        padding: 1rem 2rem;
+    }
+}
+.our-vision{
+    padding: 5rem 8rem;
+    background-image: linear-gradient(5deg, rgba(20, 21, 22, 0.301) 26%, rgba(19, 127, 190, 0.233) 100%),url('../img/admin.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    color: #fff;
+    @include phoneMobile{
+        padding: 1rem 2rem;
+    }
+}
+.our-values{
+    padding: 3rem 8rem;
+    @include phoneMobile{
+        padding: 2rem 2rem;
+    }
+}
+.contact{
+    padding: 5rem 8rem;
+    @include phoneMobile{
+        padding: 5rem 1rem;
+    }
+}
+.contact-card{
+    width: 22rem;
+    @include phoneMobile{
+        width: 20rem
+    }
+}
+.contact-form{
+    width: 35rem;
+    @include phoneMobile{
+        width: 20rem
+    }
+}
 
 
 @import'../boostrap/scss/bootstrap.scss';
